@@ -23,8 +23,11 @@ const AuthProvider = ({children}) => {
             }
             try {
                 const {data} = await clienteAxios('vets/profile',config);
+                console.log(data)
                 setAuth(data)         
             } catch (error) {
+                console.log(error.response)
+
                 console.log(error.response.data.msg)
                 setAuth({})
             }
