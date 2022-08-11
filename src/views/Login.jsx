@@ -38,8 +38,10 @@ const handleSubmit = async(e) => {
           setAuth(data)
           navigate('/admin')
         } catch (error) {
+          console.log(error)
+
           console.log(error.response)
-/*           localStorage.removeItem('apv_token') */
+
           setShowAlert({
             msg: error.response.data.msg,
             error: true

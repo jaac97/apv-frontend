@@ -10,6 +10,7 @@ const AuthProvider = ({children}) => {
     useEffect(() => {
         const authVet = async() =>{
             const token = localStorage.getItem('apv_token')
+            console.log(token)
             if(!token) {
                 setLoad(false)
                 return
